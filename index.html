@@ -78,7 +78,7 @@
         }
         .search-container {
             position: absolute;
-            right: 40px; /* Adjusted from 20px to 40px */
+            right: 40px;
         }
         .search-container input[type="text"] {
             padding: 10px;
@@ -89,6 +89,17 @@
         .content {
             text-align: center;
             margin-top: 100px;
+        }
+        .image-gallery {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+        .image-gallery img {
+            width: 32%;
+            height: auto;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -118,8 +129,11 @@
         </div>
     </nav>
     <div class="content">
-        <h1>Welcome to My GitHub Pages Website</h1>
-        <p>This is the homepage. Use the links above to navigate.</p>
+        <div class="image-gallery">
+            <img src="labimage.jpeg" alt="Lab Image">
+            <img src="covid.avif" alt="Covid">
+            <img src="healthcare.webp" alt="Healthcare">
+        </div>
     </div>
 </body>
 </html>
