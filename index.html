@@ -21,9 +21,15 @@
             position: fixed;
             top: 0;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             padding: 0 20px;
+        }
+        .nav-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
         }
         nav ul {
             list-style: none;
@@ -71,6 +77,7 @@
         .search-container {
             display: flex;
             align-items: center;
+            margin-right: 20px;
         }
         .search-container input[type="text"] {
             padding: 10px;
@@ -86,21 +93,23 @@
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#team">Team</a></li>
-            <li>
-                <a href="#research">Research</a>
-                <ul>
-                    <li><a href="#medicare">Medicare</a></li>
-                    <li><a href="#providers">Providers</a></li>
-                    <li><a href="#child-health">Child Health</a></li>
-                    <li><a href="#adult-health">Adult Health</a></li>
-                    <li><a href="#covid-19">COVID-19</a></li>
-                    <li><a href="#data">Data</a></li>
-                </ul>
-            </li>
-        </ul>
+        <div class="nav-center">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#team">Team</a></li>
+                <li>
+                    <a href="#research">Research</a>
+                    <ul>
+                        <li><a href="#medicare">Medicare</a></li>
+                        <li><a href="#providers">Providers</a></li>
+                        <li><a href="#child-health">Child Health</a></li>
+                        <li><a href="#adult-health">Adult Health</a></li>
+                        <li><a href="#covid-19">COVID-19</a></li>
+                        <li><a href="#data">Data</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
         <div class="search-container">
             <input type="text" placeholder="Search...">
         </div>
