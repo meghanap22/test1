@@ -24,7 +24,7 @@
         }
         .nav-content {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             width: 100%;
             position: relative;
@@ -33,7 +33,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-left: 40px; /* Add margin to create the gap */
+            flex-grow: 1; /* Ensure it grows to fill space between logo and search bar */
         }
         .brand-name {
             font-weight: bold;
@@ -48,6 +48,9 @@
             padding: 0;
             margin: 0;
             display: flex;
+            justify-content: center; /* Center the nav links */
+            align-items: center;
+            flex-grow: 1; /* Ensure it grows to fill space between logo and search bar */
         }
         nav ul li {
             position: relative;
