@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My GitHub Pages Website</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -19,14 +17,14 @@
             position: fixed;
             top: 0;
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             padding: 0 20px;
             z-index: 1000;
         }
         .nav-content {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             width: 100%;
             position: relative;
@@ -35,13 +33,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            margin-left: 20px; /* Add margin to create the gap */
         }
-        .logo {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 24px;
+        .brand-name {
             font-weight: bold;
+            font-size: 24px; /* Slightly larger font */
             color: #fff;
-            margin-right: 20px;
+            font-family: 'Times New Roman', Times, serif; /* Formal and exciting font */
+            letter-spacing: 1px; /* Add spacing between letters */
         }
         nav ul {
             list-style: none;
@@ -117,8 +116,8 @@
 </head>
 <body>
     <nav>
+        <div class="brand-name">SHINE</div>
         <div class="nav-content">
-            <div class="logo">SHINE</div>
             <div class="nav-links">
                 <ul>
                     <li><a href="#about">About</a></li>
