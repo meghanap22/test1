@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My GitHub Pages Website</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+        
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -24,7 +26,7 @@
         }
         .nav-content {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             width: 100%;
             position: relative;
@@ -33,6 +35,13 @@
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            margin-right: 20px;
         }
         nav ul {
             list-style: none;
@@ -109,6 +118,7 @@
 <body>
     <nav>
         <div class="nav-content">
+            <div class="logo">SHINE</div>
             <div class="nav-links">
                 <ul>
                     <li><a href="#about">About</a></li>
