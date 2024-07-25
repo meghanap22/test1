@@ -89,16 +89,17 @@
         }
         .content {
             margin-top: 65px; /* Adjust to the height of your navbar */
-            padding: 0 0.5in; /* Adds half an inch padding on both sides */
+            padding: 0 20px; /* Adds padding on both sides */
         }
         .image-gallery {
             display: flex;
             margin: 0;
             padding: 0;
-            width: 100%;
+            width: calc(100% - 40px); /* Adjust width to account for padding */
+            gap: 0;
         }
         .image-gallery img {
-            width: calc(33.33% - 0.33in); /* Adjust width to account for padding */
+            width: calc(33.3333% - 13.3333px); /* Adjust width to ensure images fit within the container */
             height: auto;
             display: block;
             margin: 0;
@@ -132,9 +133,9 @@
     </nav>
     <div class="content">
         <div class="image-gallery">
-            <img src="labimage.jpeg" alt="Lab Image">
-            <img src="covid.avif" alt="Covid">
-            <img src="healthcare.webp" alt="Healthcare">
+            <img src="image1.jpg" alt="Image 1">
+            <img src="image2.jpg" alt="Image 2">
+            <img src="image3.jpg" alt="Image 3">
         </div>
     </div>
 </body>
