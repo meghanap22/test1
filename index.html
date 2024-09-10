@@ -161,7 +161,7 @@
         .white-section {
             background-color: #fff;
             padding: 40px 20px;
-            margin-top: 10px; /* This margin creates the same gap as seen at the top */
+            margin-top: 0px; /* Removed the margin to bring the white section up */
             text-align: left;
             width: calc(100% - 2in); /* Match the width of the white section to the image gallery */
             margin-left: auto;
@@ -173,6 +173,7 @@
             text-align: center;
             padding: 30px 0;
             font-size: 18px; /* Smaller than the navigation bar text */
+            margin-top: 5px; /* Adjusted gap between the footer and the white section */
         }
     </style>
 </head>
@@ -212,11 +213,10 @@
             <img src="covid.avif" alt="Covid">
             <img src="healthcare.webp" alt="Healthcare">
         </div>
-        <div class="title">Secure Health Data Integration and Research NEtwork (SHINE)</div>
-        <div class="subtitle">What We Do</div>
-        
-        <!-- New white section with a small gap -->
+        <!-- Expanded white section to include title and subtitle -->
         <div class="white-section">
+            <div class="title">Secure Health Data Integration and Research NEtwork (SHINE)</div>
+            <div class="subtitle">What We Do</div>
             <h2>About Us</h2>
             <p>At SHINE, we are dedicated to integrating secure health data and promoting research across various domains of healthcare, ensuring the safety, privacy, and advancement of health technology.</p>
         </div>
