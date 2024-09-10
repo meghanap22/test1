@@ -241,14 +241,14 @@
         let currentIndex = 0;
 
         function moveRight() {
-            // Move the first image to the last position and cycle the others to the right
-            currentIndex = (currentIndex + 1) % images.length;
+            // This now moves the last image to the first position, cycling images to the left
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
             updateGallery();
         }
 
         function moveLeft() {
-            // Move the last image to the first position and cycle the others to the left
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            // This now moves the first image to the last position, cycling images to the right
+            currentIndex = (currentIndex + 1) % images.length;
             updateGallery();
         }
 
