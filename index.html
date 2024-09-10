@@ -133,12 +133,13 @@
         }
         .image-gallery {
             display: flex;
-            width: 100%; /* Make the image gallery take the full width of the page */
+            width: calc(100% - 2in); /* Reduce width by 1 inch on both sides */
+            margin: 0 auto; /* Center the image gallery */
             gap: 0; /* Remove the gap between images */
         }
 
         .image-gallery img {
-            width: 33.3333%; /* Each image should take up one-third of the page */
+            width: calc(33.3333% - 2px); /* Adjust each image to take one-third of the reduced width */
             height: auto;
             display: block;
             margin: 0;
@@ -162,6 +163,9 @@
             padding: 40px 20px;
             margin-top: 10px; /* This margin creates the same gap as seen at the top */
             text-align: left;
+            width: calc(100% - 2in); /* Match the width of the white section to the image gallery */
+            margin-left: auto;
+            margin-right: auto;
         }
         footer {
             background-color: #2e8b57; /* Dark green */
