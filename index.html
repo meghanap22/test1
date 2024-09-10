@@ -255,17 +255,17 @@
 
         function updateGallery() {
             const gallery = document.getElementById('imageGallery');
-            
+    
             // Get the three images starting from the current index
             const visibleImages = [];
             for (let i = 0; i < 3; i++) {
                 visibleImages.push(images[(currentIndex + i) % images.length]);
             }
 
-            // Update the HTML with the visible images
-            gallery.innerHTML = visibleImages.map(src => <img src="${src}" alt="Image">).join('') + 
-                                <span class="arrow left" onclick="moveLeft()">&#9664;</span>
-                                <span class="arrow right" onclick="moveRight()">&#9654;</span>;
+            // Update the HTML with the visible images using template literals correctly
+            gallery.innerHTML = visibleImages.map(src => `<img src="${src}" alt="Image">`).join('') + 
+                        `<span class="arrow left" onclick="moveLeft()">&#9664;</span>
+                         <span class="arrow right" onclick="moveRight()">&#9654;</span>`;
         }
 
         // Automatically move the images every 2 seconds
