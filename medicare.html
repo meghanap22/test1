@@ -13,7 +13,7 @@
             background-color: #f4f4f4;
         }
         nav {
-            background-color: #333;
+            background-color: #2e8b57; /* Dark green */
             width: 100%;
             position: fixed;
             top: 0;
@@ -22,14 +22,15 @@
             align-items: center;
             padding: 0 20px;
             z-index: 1000;
+            border-bottom: 1px solid white;
         }
         .brand-name {
             position: absolute;
             left: 20px;
             font-weight: bold;
-            font-size: 28px; 
+            font-size: 28px;
             color: #fff;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Lora', serif;
             letter-spacing: 1px;
             width: 160px;
         }
@@ -55,24 +56,30 @@
         }
         nav ul li {
             position: relative;
-            margin: 0 20px;
+            margin: 0;
+            padding: 0 30px; /* Adjust padding to ensure equal spacing */
+            border-left: 1px solid #fff; /* White lines separating menu items */
+        }
+        nav ul li:first-child {
+            border-left: none; /* Remove left border for the first item */
         }
         nav ul li a {
             color: #fff;
             text-decoration: none;
             font-size: 20px;
-            padding: 15px 20px;
+            padding: 15px 0;
             display: block;
+            text-align: center;
         }
         nav ul li a:hover {
-            background-color: #575757;
+            background-color: #3c9f6e; /* Slightly lighter green on hover */
         }
         nav ul li ul {
             display: none;
             position: absolute;
             top: 50px;
             left: 0;
-            background-color: #333;
+            background-color: #2e8b57;
             list-style: none;
             padding: 0;
             margin: 0;
@@ -88,7 +95,7 @@
             width: 200px;
         }
         nav ul li ul li a:hover {
-            background-color: #575757;
+            background-color: #3c9f6e;
         }
         .search-container {
             position: absolute;
@@ -132,7 +139,7 @@
             text-decoration: none;
             color: #fff;
             padding: 10px 15px;
-            background-color: green;
+            background-color: #2e8b57; /* Same color as the navigation bar */
             border-radius: 5px;
             font-size: 16px;
             text-align: center;
@@ -143,7 +150,7 @@
             cursor: pointer;
         }
         .button-container a:hover, .button-container button:hover {
-            background-color: darkgreen;
+            background-color: #3c9f6e; /* Lighter green on hover */
         }
     </style>
 </head>
