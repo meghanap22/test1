@@ -70,9 +70,15 @@
             margin: 0;
             padding: 0 30px; /* Adjust padding to ensure equal spacing */
             border-left: 1px solid #fff; /* White lines separating menu items */
+            border-right: 1px solid #fff; /* Add right border for each item */
         }
+
         nav ul li:first-child {
-            border-left: none; /* Remove left border for the first item */
+            border-left: 1px solid #fff; /* Add left border for the first item */
+        }
+
+        nav ul li:last-child {
+            border-right: 1px solid #fff; /* Add right border for the last item */
         }
         nav ul li a {
             color: #fff;
