@@ -12,6 +12,9 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         nav {
             background-color: #2e8b57; /* Dark green */
@@ -128,6 +131,7 @@
             margin-right: auto;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            flex-grow: 1;
         }
         .content h1 {
             text-align: center;
@@ -159,6 +163,13 @@
         }
         .education {
             margin-top: 20px;
+        }
+        footer {
+            background-color: #2e8b57; /* Dark green */
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 18px; /* Smaller than the navigation bar text */
         }
     </style>
 </head>
