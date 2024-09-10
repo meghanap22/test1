@@ -26,11 +26,11 @@
             position: absolute;
             left: 20px;
             font-weight: bold;
-            font-size: 28px; /* Slightly larger font */
+            font-size: 28px;
             color: #fff;
-            font-family: 'Times New Roman', Times, serif; /* Formal and exciting font */
-            letter-spacing: 1px; /* Add spacing between letters */
-            width: 160px; /* Twice the original width */
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 1px;
+            width: 160px;
         }
         .nav-content {
             display: flex;
@@ -49,7 +49,7 @@
             padding: 0;
             margin: 0;
             display: flex;
-            justify-content: center; /* Center the nav links */
+            justify-content: center;
             align-items: center;
         }
         nav ul li {
@@ -65,39 +65,6 @@
         }
         nav ul li a:hover {
             background-color: #575757;
-        }
-        nav ul li ul {
-            display: none;
-            position: absolute;
-            top: 50px;
-            left: 0;
-            background-color: #333;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li:hover ul {
-            display: block;
-        }
-        nav ul li ul li {
-            margin: 0;
-        }
-        nav ul li ul li a {
-            padding: 10px 20px;
-            width: 200px;
-        }
-        nav ul li ul li a:hover {
-            background-color: #575757;
-        }
-        .search-container {
-            position: absolute;
-            right: 40px; /* Adjusted from 20px to 40px */
-        }
-        .search-container input[type="text"] {
-            padding: 10px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
         }
         .content {
             text-align: left;
@@ -121,6 +88,26 @@
         }
         .content a:hover {
             text-decoration: underline;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container a {
+            text-decoration: none;
+        }
+        .button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -154,10 +141,13 @@
         <h1>Medicare Research</h1>
         <p><strong>Private Provision of Social Insurance: Drug-Specific Price Elasticities and Cost Sharing in Medicare Part D <a href="https://www.aeaweb.org/articles?id=10.1257/pol.20160355" target="_blank">(PDF)</a> <em><strong>American Economic Journal: Economic Policy</strong></em>, 10(3), August 2018</strong></p>
         <p>Authors: <a href="https://leinav.people.stanford.edu/" target="_blank">Liran Einav</a> and <a href="https://economics.mit.edu/people/faculty/amy-finkelstein" target="_blank">Amy Finkelstein</a></p>
-        <p><a href="https://web.stanford.edu/~mpolyak/Einav_Finkelstein_Polyakova_appendix.pdf" target="_blank">Online Appendices</a></p>
-        <p><a href="https://www.openicpsr.org/openicpsr/project/114695/version/V1/view" target="_blank">Replication Code</a></p>
-        <p><a href="#" target="_blank">Drug-level elasticity estimates - downloadable .xls</a></p>
-        <p><a href="#" target="_blank">Class-level elasticity estimates - downloadable .xls</a></p>
+        
+        <div class="button-container">
+            <a href="https://web.stanford.edu/~mpolyak/Einav_Finkelstein_Polyakova_appendix.pdf" target="_blank"><button class="button">Online Appendices</button></a>
+            <a href="https://www.openicpsr.org/openicpsr/project/114695/version/V1/view" target="_blank"><button class="button">Replication Code</button></a>
+            <a href="#" target="_blank"><button class="button">Drug-level Elasticity (.xls)</button></a>
+            <a href="#" target="_blank"><button class="button">Class-level Elasticity (.xls)</button></a>
+        </div>
     </div>
 </body>
 </html>
