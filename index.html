@@ -11,7 +11,10 @@
             font-family: 'Lora', serif;
             margin: 0;
             padding: 0;
-            background-color: #fff; /* Plain white background */
+            background-image: url('background.png'); /* Background image */
+            background-size: cover;
+            background-position: center;
+            background-color: #fff; /* Fallback to white background if image doesn't load */
         }
         nav {
             background-color: #2e8b57; /* Dark green */
@@ -80,29 +83,6 @@
         nav ul li a:hover {
             background-color: #3c9f6e; /* Slightly lighter green on hover */
         }
-        nav ul li ul {
-            display: none;
-            position: absolute;
-            top: 50px;
-            left: 0;
-            background-color: #2e8b57;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li:hover ul {
-            display: block;
-        }
-        nav ul li ul li {
-            margin: 0;
-        }
-        nav ul li ul li a {
-            padding: 10px 20px;
-            width: 200px;
-        }
-        nav ul li ul li a:hover {
-            background-color: #3c9f6e;
-        }
         .search-container {
             position: absolute;
             right: 40px;
@@ -119,6 +99,7 @@
             border: none;
             border-radius: 5px;
         }
+        /* Main content styles */
         .content {
             margin-top: 65px;
             padding: 0 20px;
@@ -136,23 +117,56 @@
             display: block;
             margin: 0;
         }
+        /* Title and subtitle styling */
         .title {
             font-weight: bold;
             font-size: 28px;
-            color: #000;
+            color: #2e8b57; /* Same green as navigation bar */
             font-family: 'Lora', serif;
             letter-spacing: 1px;
             margin-top: 20px;
         }
         .subtitle {
             font-size: 20px;
-            color: #000;
+            color: #4d4d4d; /* Dark gray color for subtitle */
             margin-top: 10px;
             font-family: 'Lora', serif;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #2e8b57; /* Same dark green as the navigation bar */
+            padding: 30px 0; /* Twice the height of the navigation bar */
+            text-align: center;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* White box in the middle of the background */
+        .white-box {
+            background-color: white;
+            width: 60%; /* Width of the white box */
+            margin: 0 auto; /* Center the white box */
+            padding: 40px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        /* Responsive design adjustments */
+        @media (max-width: 768px) {
+            nav ul li {
+                padding: 0 15px; /* Adjust padding for smaller screens */
+            }
+            .white-box {
+                width: 90%; /* Make the white box take more space on smaller screens */
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation bar -->
     <nav>
         <div class="brand-name">
             SHINE
@@ -182,14 +196,18 @@
             </div>
         </div>
     </nav>
+
+    <!-- White box centered in the background -->
     <div class="content">
-        <div class="image-gallery">
-            <img src="labimage.jpeg" alt="Lab Image">
-            <img src="covid.avif" alt="Covid">
-            <img src="healthcare.webp" alt="Healthcare">
+        <div class="white-box">
+            <h1>Welcome to SHINE</h1>
+            <p>Our mission is to securely integrate health data and facilitate cutting-edge research.</p>
         </div>
-        <div class="title">Secure Health Data Integration and Research NEtwork (SHINE)</div>
-        <div class="subtitle">What We Do</div>
     </div>
+
+    <!-- Footer -->
+    <footer>
+        © 2024 SHINE - Secure Health Data Integration and Research Network
+    </footer>
 </body>
 </html>
