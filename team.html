@@ -33,7 +33,12 @@
             color: #fff;
             font-family: 'Lora', serif;
             letter-spacing: 1px;
-            width: 160px;
+            display: flex;
+            align-items: center;
+        }
+        .brand-name img {
+            height: 28px; /* Adjust this value to match SHINE label size */
+            margin-left: 10px; /* Space between SHINE and the privacy image */
         }
         .nav-content {
             display: flex;
@@ -101,6 +106,12 @@
         .search-container {
             position: absolute;
             right: 40px;
+            display: flex;
+            align-items: center;
+        }
+        .search-container img {
+            height: 23px; /* Adjust this value to match the search bar size */
+            margin-right: 10px; /* Space between search icon and input */
         }
         .search-container input[type="text"] {
             padding: 10px;
@@ -153,7 +164,10 @@
 </head>
 <body>
     <nav>
-        <div class="brand-name">SHINE</div>
+        <div class="brand-name">
+            SHINE
+            <img src="privacy.png" alt="Privacy Icon">
+        </div>
         <div class="nav-content">
             <div class="nav-links">
                 <ul>
@@ -173,6 +187,7 @@
                 </ul>
             </div>
             <div class="search-container">
+                <img src="searchh.png" alt="Search Icon">
                 <input type="text" placeholder="Search...">
             </div>
         </div>
