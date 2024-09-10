@@ -129,6 +129,7 @@
             height: auto;
             display: block;
             margin: 0;
+            transition: transform 0.5s ease-in-out;
         }
 
         .arrow {
@@ -266,6 +267,9 @@
                                 `<span class="arrow left" onclick="moveLeft()">&#9664;</span>
                                 <span class="arrow right" onclick="moveRight()">&#9654;</span>`;
         }
+
+        // Automatically move the images every 2 seconds
+        setInterval(moveRight, 2000);
 
         window.onload = updateGallery;
     </script>
