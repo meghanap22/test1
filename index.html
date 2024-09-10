@@ -174,17 +174,8 @@
             font-size: 20px; 
             text-align: center;
             margin-top: 10px;
-            margin-left: 60px;
-            margin-right: 60px;
-        }
-
-        .blue-section p {
-            color: #1d3557; /* Same dark blue used throughout the page */
-            font-size: 20px;
-            text-align: center;
-            margin-top: 10px;
-            margin-left: 60px;
-            margin-right: 60px;
+            margin-left: 300px;
+            margin-right: 300px;
         }
         
         footer {
@@ -233,31 +224,54 @@
             <h2>Secure Health Data Integration and Research Network (SHINE)</h2>
             <p>Our mission is to find obstacles to health access and create practical solutions that help people across the U.S. improve their health and well-being through secure data sharing and research.</p>
         </div>
-
-        <!-- New paragraph as per your request -->
-        <div class="blue-section">
-            <p>Then when people click on "Research", they should be able to select a paper (kind of like here: 
-                <a href="https://opportunityinsights.org/paper/">https://opportunityinsights.org/paper/</a>). For each paper, 
-                it should list a topic, title, authors, publication reference. And then provide a way to click on a button that 
-                shows the abstract of the paper (which is hidden by default). For each paper, there should then be several links:
-            </p>
-            <p>
-                Non-technical summary, Ungated PDF, Published version, Appendix, Data, Replication code.
-            </p>
-            <p>
-                As a test run, we should start with one paper: "Private Provision of Social Insurance: Drug-Specific Price 
-                Elasticities and Cost Sharing in Medicare Part D". Please look at what materials are already available for this paper 
-                on my personal page (<a href="https://mpolyak.people.stanford.edu/research">https://mpolyak.people.stanford.edu/research</a>). 
-                You can see the abstract in the published version link. I have already uploaded just into the main repo folder two data files 
-                associated with this paper that I think have some issues for being downloaded from my personal page.
-            </p>
-            <p>
-                Please feel free to use your judgement and imagination on which graphs could be included on the paper's page. 
-                Taking a main chart out of the paper and including it directly on the web page would be nice. When you create the materials for 
-                this one paper, please move any relevant files that you find on my personal website to be stored in the github repo. 
-                I imagine there should be one folder per paper in the repo.
-            </p>
-        </div>
     </div>
     <footer>
-        © 2024
+        © 2024 SHINE - Secure Health Data Integration and Research Network
+    </footer>
+
+    <script>
+        const images = [
+            'labimage.jpeg', 
+            'covid.avif', 
+            'healthcare.webp',
+            'medical.jpg', 
+            'health.png',
+            'lock.jpeg'
+        ];
+
+        let currentIndex = 0;
+
+        function moveRight() {
+            // This now moves the last image to the first position, cycling images to the left
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateGallery();
+        }
+
+        function moveLeft() {
+            // This now moves the first image to the last position, cycling images to the right
+            currentIndex = (currentIndex + 1) % images.length;
+            updateGallery();
+        }
+
+        function updateGallery() {
+            const gallery = document.getElementById('imageGallery');
+    
+            // Get the three images starting from the current index
+            const visibleImages = [];
+            for (let i = 0; i < 3; i++) {
+                visibleImages.push(images[(currentIndex + i) % images.length]);
+            }
+
+            // Update the HTML with the visible images using template literals correctly
+            gallery.innerHTML = visibleImages.map(src => <img src="${src}" alt="Image">).join('') + 
+                        <span class="arrow left" onclick="moveLeft()">&#9664;</span>
+                         <span class="arrow right" onclick="moveRight()">&#9654;</span>;
+        }
+
+        // Automatically move the images every 2 seconds
+        setInterval(moveRight, 2000);
+
+        window.onload = updateGallery;
+    </script>
+</body>
+</html>
