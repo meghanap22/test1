@@ -140,7 +140,12 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             flex-grow: 1;
             display: flex;
+            flex-direction: column; /* Ensures the title stays above */
             margin-bottom: 50px;
+        }
+        .profile-section {
+            display: flex; /* Flexbox layout for image and content side-by-side */
+            margin-top: 20px;
         }
         .profile-img {
             flex: 1; /* Allow space for the image */
@@ -163,6 +168,9 @@
             text-align: center;
             padding: 30px 0;
             font-size: 18px;
+        }
+        h1 {
+            text-align: center; /* Center the "Current Team Members" title */
         }
     </style>
 </head>
@@ -197,22 +205,25 @@
         </div>
     </nav>
     <div class="content">
-        <div class="profile-img">
-            <img src="maria.jpg" alt="Maria Polyakova">
-        </div>
-        <div class="profile-info">
-            <p class="appointments"><strong>Appointments</strong></p>
-            <ul>
-                <li>Associate Professor, Department of Health Policy, Stanford University School of Medicine</li>
-                <li>Senior Fellow, Stanford Institute for Economic Policy Research (SIEPR)</li>
-                <li>NBER Faculty Research Fellow (Health Care and Public Economics)</li>
-                <li>Research Network Affiliate, CESifo</li>
-            </ul>
-            <p class="education"><strong>Education</strong></p>
-            <ul>
-                <li>PhD, Economics, Massachusetts Institute of Technology (MIT), 2014</li>
-                <li>BA, Economics & Mathematics, Yale University, 2008</li>
-            </ul>
+        <h1><strong>Current Team Members</strong></h1> <!-- Title remains -->
+        <div class="profile-section"> <!-- Flex container for image and info -->
+            <div class="profile-img">
+                <img src="maria.jpg" alt="Maria Polyakova">
+            </div>
+            <div class="profile-info">
+                <p class="appointments"><strong>Appointments</strong></p>
+                <ul>
+                    <li>Associate Professor, Department of Health Policy, Stanford University School of Medicine</li>
+                    <li>Senior Fellow, Stanford Institute for Economic Policy Research (SIEPR)</li>
+                    <li>NBER Faculty Research Fellow (Health Care and Public Economics)</li>
+                    <li>Research Network Affiliate, CESifo</li>
+                </ul>
+                <p class="education"><strong>Education</strong></p>
+                <ul>
+                    <li>PhD, Economics, Massachusetts Institute of Technology (MIT), 2014</li>
+                    <li>BA, Economics & Mathematics, Yale University, 2008</li>
+                </ul>
+            </div>
         </div>
     </div>
     <footer>
