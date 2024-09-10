@@ -57,20 +57,20 @@
         }
         nav ul li {
             position: relative;
-            margin: 0;
+            margin: 0 0; /* Removes unnecessary margin */
+            padding: 0 10px; /* Equal padding between words and lines */
         }
         nav ul li + li::before {
             content: "|";
-            color: #fff; /* White line */
-            margin: 0 15px; /* Adjust spacing before and after the line */
+            color: #fff; /* White separator line */
+            margin: 0 10px; /* Equal space on both sides of the separator */
             display: inline-block;
-            line-height: 20px; /* Match the line height with the text size */
+            line-height: 1.2; /* Match the height of the text */
         }
         nav ul li a {
             color: #fff;
             text-decoration: none;
             font-size: 20px;
-            padding: 0 10px; /* Equal padding on both sides of the text */
             display: block;
         }
         nav ul li a:hover {
