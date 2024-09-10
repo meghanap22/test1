@@ -243,13 +243,13 @@
 
         function moveRight() {
             // Move to the next image by decreasing the index
-            currentIndex = (currentIndex + 1) % images.length;
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
             updateGallery();
         }
 
         function moveLeft() {
             // Move to the previous image by increasing the index
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            currentIndex = (currentIndex + 1) % images.length;
             updateGallery();
         }
 
