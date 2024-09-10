@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My GitHub Pages Website</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Lora', serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #fff; /* Plain white background */
         }
         nav {
-            background-color: #333;
+            background-color: #2e8b57; /* Dark green */
             width: 100%;
             position: fixed;
             top: 0;
@@ -21,16 +23,17 @@
             align-items: center;
             padding: 0 20px;
             z-index: 1000;
+            border-bottom: 1px solid white;
         }
         .brand-name {
             position: absolute;
             left: 20px;
             font-weight: bold;
-            font-size: 28px; /* Slightly larger font */
+            font-size: 28px;
             color: #fff;
-            font-family: 'Times New Roman', Times, serif; /* Formal and exciting font */
-            letter-spacing: 1px; /* Add spacing between letters */
-            width: 160px; /* Twice the original width */
+            font-family: 'Lora', serif;
+            letter-spacing: 1px;
+            width: 160px;
         }
         .nav-content {
             display: flex;
@@ -49,12 +52,16 @@
             padding: 0;
             margin: 0;
             display: flex;
-            justify-content: center; /* Center the nav links */
+            justify-content: center;
             align-items: center;
         }
         nav ul li {
             position: relative;
             margin: 0 20px;
+            border-left: 1px solid #fff; /* White lines separating menu items */
+        }
+        nav ul li:first-child {
+            border-left: none; /* Remove left border for the first item */
         }
         nav ul li a {
             color: #fff;
@@ -64,14 +71,14 @@
             display: block;
         }
         nav ul li a:hover {
-            background-color: #575757;
+            background-color: #3c9f6e; /* Slightly lighter green on hover */
         }
         nav ul li ul {
             display: none;
             position: absolute;
             top: 50px;
             left: 0;
-            background-color: #333;
+            background-color: #2e8b57;
             list-style: none;
             padding: 0;
             margin: 0;
@@ -87,11 +94,11 @@
             width: 200px;
         }
         nav ul li ul li a:hover {
-            background-color: #575757;
+            background-color: #3c9f6e;
         }
         .search-container {
             position: absolute;
-            right: 40px; /* Adjusted gap to 40px */
+            right: 40px;
         }
         .search-container input[type="text"] {
             padding: 10px;
@@ -100,19 +107,19 @@
             border-radius: 5px;
         }
         .content {
-            margin-top: 65px; /* Adjust to the height of your navbar */
-            padding: 0 20px; /* Adds padding on both sides */
-            text-align: center; /* Center align the content */
+            margin-top: 65px;
+            padding: 0 20px;
+            text-align: center;
         }
         .image-gallery {
             display: flex;
             margin: 0 auto;
             padding: 0;
-            width: calc(100% - 1in); /* Adjust width to account for padding */
+            width: calc(100% - 1in);
             gap: 0;
         }
         .image-gallery img {
-            width: calc(33.3333%); /* Adjust width to ensure images fit within the container */
+            width: calc(33.3333%);
             height: auto;
             display: block;
             margin: 0;
@@ -121,14 +128,15 @@
             font-weight: bold;
             font-size: 28px;
             color: #000;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Lora', serif;
             letter-spacing: 1px;
             margin-top: 20px;
         }
         .subtitle {
-            font-size: 20px; /* Match font size to nav links */
+            font-size: 20px;
             color: #000;
             margin-top: 10px;
+            font-family: 'Lora', serif;
         }
     </style>
 </head>
