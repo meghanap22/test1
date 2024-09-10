@@ -125,18 +125,20 @@
         }
         .button-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-around;
             margin-top: 20px;
         }
         .button-container a {
             text-decoration: none;
             color: #fff;
-            padding: 10px 20px;
+            padding: 10px 15px;
             background-color: green;
             border-radius: 5px;
             font-size: 16px;
             text-align: center;
-            width: 200px;
+            flex: 1;
+            margin: 0 10px;
+            max-width: 150px; /* Reduced width to make space between buttons */
         }
         .button-container a:hover {
             background-color: darkgreen;
@@ -179,8 +181,8 @@
         <div class="button-container">
             <a href="https://web.stanford.edu/~mpolyak/Einav_Finkelstein_Polyakova_appendix.pdf" target="_blank">Online Appendices</a>
             <a href="https://www.openicpsr.org/openicpsr/project/114695/version/V1/view" target="_blank">Replication Code</a>
-            <a href="#" target="_blank">Drug-Level Elasticity</a>
-            <a href="#" target="_blank">Class-Level Elasticity</a>
+            <a href="/mnt/data/EFP_drugs_elasticities.xls" download>Drug-Level Elasticity</a>
+            <a href="/mnt/data/EFP_tclass_elasticities.xls" download>Class-Level Elasticity</a>
         </div>
     </div>
 </body>
