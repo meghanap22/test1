@@ -133,13 +133,13 @@
         }
         .image-gallery {
             display: flex;
-            width: calc(100% - 2in); /* Reduce width by 1 inch on both sides */
+            width: calc(100% - 2in); /* Same width as white section */
             margin: 0 auto; /* Center the image gallery */
             gap: 0; /* Remove the gap between images */
         }
 
         .image-gallery img {
-            width: calc(33.3333%); /* Each image takes up one-third of the width */
+            width: calc(33.3333% - 1px); /* Each image takes up one-third of the width minus a small margin */
             height: auto;
             display: block;
             margin: 0;
