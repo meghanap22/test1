@@ -242,14 +242,14 @@
         let currentIndex = 0;
 
         function moveRight() {
-            // This now moves the last image to the first position, cycling images to the left
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            // Move to the next image by decreasing the index
+            currentIndex = (currentIndex + 1) % images.length;
             updateGallery();
         }
 
         function moveLeft() {
-            // This now moves the first image to the last position, cycling images to the right
-            currentIndex = (currentIndex + 1) % images.length;
+            // Move to the previous image by increasing the index
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
             updateGallery();
         }
 
@@ -263,9 +263,9 @@
             }
 
             // Update the HTML with the visible images using template literals correctly
-            gallery.innerHTML = visibleImages.map(src => <img src="${src}" alt="Image">).join('') + 
-                        <span class="arrow left" onclick="moveLeft()">&#9664;</span>
-                         <span class="arrow right" onclick="moveRight()">&#9654;</span>;
+            gallery.innerHTML = visibleImages.map(src => `<img src="${src}" alt="Image">`).join('') + 
+                            `    <span class="arrow left" onclick="moveLeft()">&#9664;</span>
+                                 <span class="arrow right" onclick="moveRight()">&#9654;</span>`;
         }
 
         // Automatically move the images every 2 seconds
