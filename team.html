@@ -11,10 +11,10 @@
             font-family: 'Lora', serif;
             margin: 0;
             padding: 0;
-            background-image: url('whiteb.jpg'); /* Change the background image to whiteb.jpg */
-            background-size: cover; /* Make sure the background covers the entire page */
+            background-image: url('whiteb.jpg'); /* Background image */
+            background-size: cover;
             background-position: center;
-            background-repeat: no-repeat; /* Do not repeat the background image */
+            background-repeat: no-repeat;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
@@ -43,8 +43,8 @@
             align-items: center;
         }
         .brand-name img {
-            height: 28px; /* Adjust this value to match SHINE label size */
-            margin-left: 10px; /* Space between SHINE and the privacy image */
+            height: 28px; /* Adjust for SHINE logo */
+            margin-left: 10px;
         }
         .nav-content {
             display: flex;
@@ -69,17 +69,15 @@
         nav ul li {
             position: relative;
             margin: 0;
-            padding: 0 30px; /* Adjust padding to ensure equal spacing */
-            border-left: 1px solid #fff; /* White lines separating menu items */
-            border-right: 1px solid #fff; /* Add right border for each item */
+            padding: 0 30px; /* Equal spacing */
+            border-left: 1px solid #fff; /* White borders */
+            border-right: 1px solid #fff;
         }
-
         nav ul li:first-child {
-            border-left: 1px solid #fff; /* Add left border for the first item */
+            border-left: 1px solid #fff;
         }
-
         nav ul li:last-child {
-            border-right: 1px solid #fff; /* Add right border for the last item */
+            border-right: 1px solid #fff;
         }
         nav ul li a {
             color: #fff;
@@ -90,14 +88,14 @@
             text-align: center;
         }
         nav ul li a:hover {
-            background-color: #457b9d; /* Slightly lighter blue on hover */
+            background-color: #457b9d; /* Lighter blue on hover */
         }
         nav ul li ul {
             display: none;
             position: absolute;
             top: 50px;
             left: 0;
-            background-color: #1d3557; /* Dark blue */
+            background-color: #1d3557;
             list-style: none;
             padding: 0;
             margin: 0;
@@ -122,8 +120,8 @@
             align-items: center;
         }
         .search-container img {
-            height: 23px; /* Adjust this value to match the search bar size */
-            margin-right: 10px; /* Space between search icon and input */
+            height: 23px; /* Adjust for search icon */
+            margin-right: 10px;
         }
         .search-container input[type="text"] {
             padding: 10px;
@@ -135,51 +133,36 @@
             text-align: left;
             margin-top: 100px;
             padding: 20px;
-            max-width: 800px;
+            max-width: 1000px; /* Increased width */
             margin-left: auto;
             margin-right: auto;
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             flex-grow: 1;
-            margin-bottom: 50px; /* Add margin at the bottom to create space between content and footer */
+            display: flex;
+            margin-bottom: 50px;
         }
-        .content h1 {
-            text-align: center;
+        .profile-img {
+            flex: 1; /* Allow space for the image */
+            margin-right: 20px;
         }
-        .content p {
-            margin: 10px 0;
-        }
-        .content a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-        .content a:hover {
-            text-decoration: underline;
+        .profile-img img {
+            max-width: 100%; /* Ensure the image fits */
+            height: auto;
         }
         .profile-info {
+            flex: 2; /* Allow more space for text */
             font-size: 18px;
         }
-        .profile-info img {
-            display: block;
-            margin: 20px auto;
-            max-width: 100%;
-        }
-        .profile-info ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-        .appointments {
-            margin-bottom: 10px;
-        }
-        .education {
-            margin-top: 20px;
+        .appointments, .education {
+            margin-bottom: 20px;
         }
         footer {
-            background-color: #1d3557; /* Dark blue */
+            background-color: #1d3557;
             color: #fff;
             text-align: center;
             padding: 30px 0;
-            font-size: 18px; /* Smaller than the navigation bar text */
+            font-size: 18px;
         }
     </style>
 </head>
@@ -214,9 +197,10 @@
         </div>
     </nav>
     <div class="content">
-        <h1><strong>Current Team Members</strong></h1>
-        <div class="profile-info">
+        <div class="profile-img">
             <img src="maria.jpg" alt="Maria Polyakova">
+        </div>
+        <div class="profile-info">
             <p class="appointments"><strong>Appointments</strong></p>
             <ul>
                 <li>Associate Professor, Department of Health Policy, Stanford University School of Medicine</li>
