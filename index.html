@@ -233,7 +233,7 @@
             'labimage.jpeg', 
             'covid.avif', 
             'healthcare.webp',
-            'medical.jpg', // Add your additional images
+            'medical.jpg', 
             'health.png',
             'lock.jpeg'
         ];
@@ -241,27 +241,33 @@
         let currentIndex = 0;
 
         function moveRight() {
+            // Move the first image to the last position and cycle the others to the right
             currentIndex = (currentIndex + 1) % images.length;
             updateGallery();
         }
 
         function moveLeft() {
+            // Move the last image to the first position and cycle the others to the left
             currentIndex = (currentIndex - 1 + images.length) % images.length;
             updateGallery();
         }
 
         function updateGallery() {
             const gallery = document.getElementById('imageGallery');
-            const visibleImages = images.slice(currentIndex, currentIndex + 3);
-
-            if (visibleImages.length < 3) {
-                visibleImages.push(...images.slice(0, 3 - visibleImages.length));
+            
+            // Get the three images starting from the current index
+            const visibleImages = [];
+            for (let i = 0; i < 3; i++) {
+                visibleImages.push(images[(currentIndex + i) % images.length]);
             }
 
+            // Update the HTML with the visible images
             gallery.innerHTML = visibleImages.map(src => `<img src="${src}" alt="Image">`).join('') + 
                                 `<span class="arrow left" onclick="moveLeft()">&#9664;</span>
                                 <span class="arrow right" onclick="moveRight()">&#9654;</span>`;
         }
+
+        window.onload = updateGallery;
     </script>
 </body>
 </html>
