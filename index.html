@@ -11,16 +11,16 @@
             font-family: 'Lora', serif;
             margin: 0;
             padding: 0;
-            background-image: url('whiteb.jpg'); /* Apply the green.png image as the background */
-            background-size: cover; /* Ensure the background covers the entire page */
+            background-image: url('whiteb.jpg'); 
+            background-size: cover; 
             background-position: center;
-            background-repeat: no-repeat; /* Do not repeat the background image */
+            background-repeat: no-repeat; 
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
         nav {
-            background-color: #1d3557; /* Dark blue */
+            background-color: #1d3557; 
             width: 100%;
             position: fixed;
             top: 0;
@@ -43,8 +43,8 @@
             align-items: center;
         }
         .brand-name img {
-            height: 28px; /* Adjust this value to match SHINE label size */
-            margin-left: 10px; /* Space between SHINE and the privacy image */
+            height: 28px; 
+            margin-left: 10px; 
         }
         .nav-content {
             display: flex;
@@ -70,17 +70,17 @@
         nav ul li {
             position: relative;
             margin: 0;
-            padding: 0 30px; /* Adjust padding to ensure equal spacing */
-            border-left: 1px solid #fff; /* White lines separating menu items */
-            border-right: 1px solid #fff; /* Add right border for each item */
+            padding: 0 30px; 
+            border-left: 1px solid #fff; 
+            border-right: 1px solid #fff; 
         }
 
         nav ul li:first-child {
-            border-left: 1px solid #fff; /* Add left border for the first item */
+            border-left: 1px solid #fff; 
         }
 
         nav ul li:last-child {
-            border-right: 1px solid #fff; /* Add right border for the last item */
+            border-right: 1px solid #fff; 
         }
         
         nav ul li a {
@@ -92,30 +92,7 @@
             text-align: center;
         }
         nav ul li a:hover {
-            background-color: #457b9d; /* Slightly lighter blue on hover */
-        }
-        nav ul li ul {
-            display: none;
-            position: absolute;
-            top: 50px;
-            left: 0;
-            background-color: #1d3557; /* Dark blue */
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        nav ul li:hover ul {
-            display: block;
-        }
-        nav ul li ul li {
-            margin: 0;
-        }
-        nav ul li ul li a {
-            padding: 10px 20px;
-            width: 200px;
-        }
-        nav ul li ul li a:hover {
-            background-color: #457b9d; /* Slightly lighter blue on hover */
+            background-color: #457b9d; 
         }
         .search-container {
             position: absolute;
@@ -124,8 +101,8 @@
             align-items: center;
         }
         .search-container img {
-            height: 23px; /* Adjust this value to match the search bar size */
-            margin-right: 10px; /* Space between search icon and input */
+            height: 23px; 
+            margin-right: 10px; 
         }
         .search-container input[type="text"] {
             padding: 10px;
@@ -140,52 +117,73 @@
             flex-grow: 1;
         }
         .image-gallery {
+            position: relative;
             display: flex;
-            width: calc(100% - 2in); /* Same width as white section */
-            margin: 0 auto; /* Center the image gallery */
-            gap: 0; /* Remove the gap between images */
+            width: calc(100% - 2in); 
+            margin: 0 auto; 
+            gap: 0; 
         }
 
         .image-gallery img {
-            width: calc(33.3333% - 1px); /* Each image takes up one-third of the width minus a small margin */
+            width: calc(33.3333% - 1px); 
             height: auto;
             display: block;
             margin: 0;
         }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .arrow.left {
+            left: 0;
+        }
+
+        .arrow.right {
+            right: 0;
+        }
+
         .white-section {
             background-color: #fff;
             padding: 40px 20px;
-            margin-top: 15px; /* Same gap between images and white section */
-            margin-bottom: 15px; /* Match this gap with the space before the footer */
-            text-align: center; /* Center the text */
-            width: calc(100% - 2in); /* Match the width of the white section to the image gallery */
+            margin-top: 15px; 
+            margin-bottom: 15px; 
+            text-align: center; 
+            width: calc(100% - 2in); 
             margin-left: auto;
             margin-right: auto;
         }
         .white-section h2 {
-            color: #1d3557; /* Set the color to match the dark blue in the footer */
-            font-size: 33px; /* Twice as large as the original font size */
-            font-weight: bold; /* Bold the text */
-            margin-left: 60px; /* Larger left margin */
-            margin-right: 60px; /* Larger right margin */
+            color: #1d3557; 
+            font-size: 33px; 
+            font-weight: bold; 
+            margin-left: 60px; 
+            margin-right: 60px; 
         }
 
         .white-section p {
-            color: #555; /* Dark gray */
-            font-size: 20px; /* Match font size with the navigation bar text */
+            color: #555; 
+            font-size: 20px; 
             text-align: center;
             margin-top: 10px;
-            margin-left: 30px; /* Smaller left margin compared to the title */
-            margin-right: 30px; /* Smaller right margin compared to the title */
+            margin-left: 30px;
+            margin-right: 30px;
         }
         
         footer {
-            background-color: #1d3557; /* Dark blue */
+            background-color: #1d3557; 
             color: #fff;
             text-align: center;
             padding: 30px 0;
-            margin-top: 15px; /* Match the gap with the navigation bar */
-            font-size: 18px; /* Smaller than the navigation bar text */
+            margin-top: 15px; 
+            font-size: 18px; 
         }
     </style>
 </head>
@@ -202,14 +200,6 @@
                     <li><a href="team.html">Team</a></li>
                     <li>
                         <a href="#research">Research</a>
-                        <ul>
-                            <li><a href="medicare.html">Medicare</a></li>
-                            <li><a href="#providers">Providers</a></li>
-                            <li><a href="#child-health">Child Health</a></li>
-                            <li><a href="#adult-health">Adult Health</a></li>
-                            <li><a href="#covid-19">COVID-19</a></li>
-                            <li><a href="#data">Data</a></li>
-                        </ul>
                     </li>
                 </ul>
             </div>
@@ -220,12 +210,14 @@
         </div>
     </nav>
     <div class="content">
-        <div class="image-gallery">
+        <div class="image-gallery" id="imageGallery">
             <img src="labimage.jpeg" alt="Lab Image">
             <img src="covid.avif" alt="Covid">
             <img src="healthcare.webp" alt="Healthcare">
+            <span class="arrow left" onclick="moveLeft()">&#9664;</span>
+            <span class="arrow right" onclick="moveRight()">&#9654;</span>
         </div>
-        
+
         <!-- New white section with a small gap -->
         <div class="white-section">
             <h2>Secure Health Data Integration and Research Network (SHINE)</h2>
@@ -235,5 +227,41 @@
     <footer>
         © 2024 SHINE - Secure Health Data Integration and Research Network
     </footer>
+
+    <script>
+        const images = [
+            'labimage.jpeg', 
+            'covid.avif', 
+            'healthcare.webp',
+            'medical.jpg', // Add your additional images
+            'health.png',
+            'lock.jpeg'
+        ];
+
+        let currentIndex = 0;
+
+        function moveRight() {
+            currentIndex = (currentIndex + 1) % images.length;
+            updateGallery();
+        }
+
+        function moveLeft() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            updateGallery();
+        }
+
+        function updateGallery() {
+            const gallery = document.getElementById('imageGallery');
+            const visibleImages = images.slice(currentIndex, currentIndex + 3);
+
+            if (visibleImages.length < 3) {
+                visibleImages.push(...images.slice(0, 3 - visibleImages.length));
+            }
+
+            gallery.innerHTML = visibleImages.map(src => `<img src="${src}" alt="Image">`).join('') + 
+                                `<span class="arrow left" onclick="moveLeft()">&#9664;</span>
+                                <span class="arrow right" onclick="moveRight()">&#9654;</span>`;
+        }
+    </script>
 </body>
 </html>
