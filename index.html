@@ -126,13 +126,12 @@
         }
         .image-gallery {
             display: flex;
-            margin: 0 auto;
-            padding: 0;
-            width: calc(100% - 1in);
-            gap: 0;
+            width: 100%; /* Make the image gallery take the full width of the page */
+            gap: 0; /* Remove the gap between images */
         }
+
         .image-gallery img {
-            width: calc(33.3333%);
+            width: 33.3333%; /* Each image should take up one-third of the page */
             height: auto;
             display: block;
             margin: 0;
