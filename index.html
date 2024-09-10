@@ -71,9 +71,13 @@
             margin: 0;
             padding: 0 30px; /* Adjust padding to ensure equal spacing */
             border-left: 1px solid #fff; /* White lines separating menu items */
+            border-right: 1px solid #fff; /* Add right border for each item */
         }
         nav ul li:first-child {
-            border-left: none; /* Remove left border for the first item */
+            border-left: 1px solid #fff; /* Add left border for the first item */
+        }
+        nav ul li:last-child {
+            border-right: 1px solid #fff; /* Add right border for the last item */
         }
         nav ul li a {
             color: #fff;
@@ -217,11 +221,4 @@
         <!-- New white section with a small gap -->
         <div class="white-section">
             <h2>Secure Health Data Integration and Research Network (SHINE)</h2>
-            <p>Our mission is to find obstacles to health access and create practical solutions that help people across the U.S. improve their health and well-being through secure data sharing and research.</p>
-        </div>
-    </div>
-    <footer>
-        © 2024 SHINE - Secure Health Data Integration and Research Network
-    </footer>
-</body>
-</html>
+            <p>Our mission is to find obstacles to health access and create practical solutions that help people
