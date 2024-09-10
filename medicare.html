@@ -181,9 +181,19 @@
         <div class="button-container">
             <a href="https://web.stanford.edu/~mpolyak/Einav_Finkelstein_Polyakova_appendix.pdf" target="_blank">Online Appendices</a>
             <a href="https://www.openicpsr.org/openicpsr/project/114695/version/V1/view" target="_blank">Replication Code</a>
-            <a href="https://github.com/meghanap22/mpaturu22.github.io/blob/main/EFP_drugs_elasticities.xls" download>Drug-Level Elasticity</a>
-            <a href="https://github.com/meghanap22/mpaturu22.github.io/blob/main/EFP_tclass_elasticities.xls" download>Class-Level Elasticity</a>
+            <button onclick="downloadFile('https://github.com/meghanap22/mpaturu22.github.io/blob/main/EFP_drugs_elasticities.xls')">Drug-Level Elasticity</button>
+            <button onclick="downloadFile('https://github.com/meghanap22/mpaturu22.github.io/blob/main/EFP_tclass_elasticities.xls')">Class-Level Elasticity</button>
         </div>
     </div>
+    <script>
+        function downloadFile(url) {
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', ''); // 'download' forces download behavior
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
 </body>
 </html>
