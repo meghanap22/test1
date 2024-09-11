@@ -1,11 +1,11 @@
-<!DOCTYPE html> #helo
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My GitHub Pages Website</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap'); #hello
+        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
         
         body {
             font-family: 'Lora', serif;
@@ -196,17 +196,15 @@
         </div>
         <div class="nav-content">
             <div class="nav-links">
-                <ul>
+                <ul id="navLinks">
                     <li><a href="#about">About</a></li>
                     <li><a href="team.html">Team</a></li>
-                    <li>
-                        <a href="#research">Research</a>
-                    </li>
+                    <li><a href="#research">Research</a></li>
                 </ul>
             </div>
             <div class="search-container">
                 <img src="searchh.png" alt="Search Icon">
-                <input type="text" placeholder="Search...">
+                <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterLinks()">
             </div>
         </div>
     </nav>
@@ -272,6 +270,24 @@
         setInterval(moveRight, 2000);
 
         window.onload = updateGallery;
+
+        // Search functionality for filtering nav links
+        function filterLinks() {
+            const input = document.getElementById('searchInput').value.toUpperCase();
+            const ul = document.getElementById('navLinks');
+            const li = ul.getElementsByTagName('li');
+
+            for (let i = 0; i < li.length; i++) {
+                const a = li[i].getElementsByTagName('a')[0];
+                const txtValue = a.textContent || a.innerText;
+
+                if (txtValue.toUpperCase().indexOf(input) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
     </script>
 </body>
 </html>
