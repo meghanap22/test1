@@ -220,7 +220,7 @@
             </div>
             <div class="search-container">
                 <img src="searchh.png" alt="Search Icon">
-                <input type="text" placeholder="Search...">
+                <input type="text" id="searchInput" placeholder="Search..." onkeyup="handleKeyPress(event)">
             </div>
         </div>
     </nav>
@@ -274,5 +274,68 @@
         <footer>
             © 2024 SHINE - Secure Health Data Integration and Research Network
         </footer>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+
+    <script>
+        function handleKeyPress(event) {
+            if (event.key === "Enter") {
+                searchPages();
+            }
+        }
+
+        async function searchPages() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            const pages = {
+                'About Page': 'index.html',
+                'Team Page': 'team.html',
+                'Medicare Page': 'medicare.html'
+            };
+
+            let foundPages = [];
+
+            for (const [pageName, url] of Object.entries(pages)) {
+                const response = await fetch(url);
+                const text = await response.text();
+                if (text.toLowerCase().includes(query)) {
+                    foundPages.push(pageName);
+                }
+            }
+
+            displaySearchResults(foundPages);
+        }
+
+        function displaySearchResults(foundPages) {
+            const modal = document.getElementById("myModal");
+            const messageElement = document.getElementById("modalMessage");
+
+            if (foundPages.length > 0) {
+                messageElement.innerHTML = `Refer to: ${foundPages.join(', ')}.`;
+            } else {
+                messageElement.innerHTML = "No matches found.";
+            }
+
+            modal.style.display = "block";
+        }
+
+        function closeModal() {
+            const modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+
+        // Close the modal if the user clicks outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById("myModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
